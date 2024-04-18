@@ -1,0 +1,135 @@
+body, html{
+    margin:0;
+    padding:0;
+    height: 100%;
+}
+
+
+.container {
+    margin : 40px;
+    display: grid;
+    grid-template-rows: max-content;
+    grid-template-columns: max-content;
+    row-gap: 10px;
+    column-gap: 10px;
+   grid-template-areas:
+        "header  header header"
+        "log     main     adv"
+        "footer footer footer";
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: 2fr 6fr 1fr;
+
+    height: 100%; /* 화면 전체 높이를 100%로 설정합니다 */
+}
+
+.header { 
+    color: antiquewhite;
+    grid-area: header;
+    background-color: blue;
+
+ }
+.log { 
+    color: aliceblue;
+    grid-area: log; 
+    background-color: blueviolet;
+    padding:20px;
+}
+.main{ 
+    grid-area: main;
+    
+ }
+.adv {
+    grid-area: adv;
+    
+ }
+.footer {
+     grid-area: footer;
+     background-color: chartreuse;
+     }
+
+
+
+#title{
+    margin-left: 30px;
+}
+nav{
+    
+    display:flex;
+    justify-content: flex-end;
+    width: 90%;
+    margin: 0 auto
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0px;
+}
+nav ul li {
+    margin-right: 20px;
+}
+nav ul li:last-child {
+    margin-right: 0; /* 마지막 메뉴의 오른쪽 마진을 제거합니다 */
+}
+  
+nav ul ul {
+    display: none; /* 하위 메뉴를 기본적으로 숨깁니다 */
+    position: absolute; /* 절대 위치로 설정하여 부모 요소에 상대적으로 위치시킵니다 */
+    background-color: blue; /* 배경색을 지정합니다 */
+    border-radius: 4px;
+}
+nav ul li:hover > ul {
+    display: block; /* 호버시 하위 메뉴를 보이도록 합니다 */
+}
+  nav ul li a {
+    text-decoration: none; /* 하이퍼링크의 밑줄을 제거합니다 */
+    color: aliceblue;
+    margin:20px 20px;
+}
+nav ul li a:hover {
+    color:blue;
+    background-color: aliceblue;
+    border-radius: 4px;
+}
+nav ul ul li {
+    display: block; /* 세로로 정렬되도록 합니다 */
+}
+
+.log{
+    padding: 30px 20px;
+    
+}
+
+.main article{
+    padding: 30px 20px;
+    display: grid;
+    border: 1px solid black;
+    margin-bottom: 20px;
+    background-color: aqua;
+    border-radius:20px 20px;
+}
+.card header {
+    order: -1; /* 헤더를 위로 이동시킵니다 */
+
+}
+.card {
+    display: flex; /* 요소를 가로로 배열합니다 */
+}
+
+.adv article{
+    padding: 30px 20px;
+    display: grid;
+    grid-template-rows: 100px 100px;
+    border: 1px solid black;
+    background-color: brown;
+    margin-bottom: 20px;
+    border-radius:20px 20px;
+}
+
+.footer #foot{
+    display:grid;
+    border: 1px solid black;
+    justify-content: center;
+}
+.footer #foot ul li{
+    margin-right: 100px;
+}

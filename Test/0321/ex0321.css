@@ -1,0 +1,46 @@
+*{
+    margin:0 auto;
+}
+
+h1+p {color:aqua}  /*뒤따라오는 첫번째 아이까지*/
+h1~p {font-weight:bold ;} /*동급에 해당하는 모든 아이*/
+h1{
+    text-shadow: 5px 5px 6px #232323;
+    text-decoration: underline;
+}
+/*signup 양식 안에서만 */
+#signup label{ 
+    float: left; 
+    font-size: 15px;
+    width: 120px;
+}
+#signup input{
+    border: 1px solid#2342 ;
+}
+fieldset{
+    border: 1px solid #2342;
+}
+
+legend{
+    font-size:12px;
+    font-weight: bold;
+}
+li{
+    list-style: none;
+}
+
+/*가입하기 속성*/
+#signup input[tyle='submit']{
+    background-color: blueviolet;
+    color:darkkhaki;
+    width: 100px;
+    height: 30px
+    border-radius: 10px; /*모서리 둥글게 표현*/
+}
+#signup input[type='submit']:hover{ /*마우스를 올려두면 색깔 변함*/
+    background-color: hotpink;
+}
+
+fieldset: last-of-type{
+    border:none;
+}
