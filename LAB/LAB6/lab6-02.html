@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lotto/ 최다연</title>
+    <style>
+        * {
+        margin: 0;
+        padding: 0;
+        }
+        body {
+            width: 100%; 
+            display: flex; 
+            justify-content: center; /* 수평 가운데 정렬 */
+            align-items: center; /* 수직 가운데 정렬 */
+            height: 100vh; 
+        }
+
+        #box {
+            width: 400px;
+            height: 300px;
+            background-color: rgb(31, 192, 232);
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            padding: 30px;
+            position:absolute;
+            left:50%;
+            top:50%;
+            margin-left: -200px;
+            margin-top: -150px;
+            
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <h1>* 로또 번호 생성결과 *</h1><br>
+        <button id="btn">로또 번호 생성하기</button><br><br>
+        <div id="lottonum"></div>
+        <button id="close" onclick="window.close()">닫기</button>
+    </div>
+    
+    <script>
+        var btn = document.getElementById("btn");
+        var display = document.getElementById("lottonum");
+        btn.addEventListener("click", function() {
+            var lottoNumbers = make();
+            display.textContent = "로또 번호: " + lottoNumbers.join(", ");
+        });
+
+        function make() {
+            var lottoNumbers = [];
+
+            while (lottoNumbers.length < 6) {
+                var random = Math.floor(Math.random() * 45) + 1;
+                if (!lottoNumbers.includes(random)) {
+                    lottoNumbers.push(random);
+                }
+            }
+            return lottoNumbers;
+        }
+    </script>
+</body>
+</html>

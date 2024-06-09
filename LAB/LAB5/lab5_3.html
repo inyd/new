@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <script>
+        var nameInput = prompt('이름을 입력하시오.');
+        var ageInput = prompt('나이를 입력하시오(숫자)');
+        var heightInput = prompt('키를 입력하시오(숫자)');
+        var weightInput = prompt('체중을 입력하시오(숫자)');
+        const age = Number(ageInput);
+        const height = Number(heightInput);
+        const weight = Number(weightInput);
+
+        let BMI = function(weight, height){
+            return weight / ((height / 100) ** 2);
+        }
+
+        let getCategory = function(age, bmi) {
+            if (age >= 20 && age < 30) {
+                if (bmi <= 17.9) {
+                    return "저체중";
+                } else if (bmi <= 23) {
+                    return "표준체중";
+                } else if (bmi <= 30) {
+                    return "과체중";
+                } else {
+                    return "비만";
+                }
+            } 
+            else if (age >= 30 && age < 40) {
+                if (bmi <= 18.4) {
+                    return "저체중";
+                } else if (bmi <= 24) {
+                    return "표준체중";
+                } else if (bmi <= 30) {
+                    return "과체중";
+                } else {
+                    return "비만";
+                }
+            }
+        }
+    
+        const bmi = BMI(weight, height);
+        const category = getCategory(age, bmi);
+
+        document.write("<h2>이름: " + nameInput + "<br>나이: " + ageInput + "<br>키: " + heightInput + "<br>체중: " + weightInput + "<br>당신은 " + category + "(" + bmi + ")입니다.</h2>");
+
+    </script>
+</body>
+</html>

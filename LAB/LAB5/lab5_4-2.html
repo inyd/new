@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+</head>
+<body>
+    <h2 id="timer"></h2>
+
+    <script>
+        var timeIn = prompt("카운트다운할 숫자를 입력하세요.");
+        var timer = Number(timeIn);; // 사용자 입력을 정수로 변환
+
+        // 사용자가 입력한 시간동안의 초 카운트다운
+        var countdown = setInterval(function() {
+            document.getElementById("timer").innerHTML = timer;
+            timer--; // 1초씩 감소
+
+            if (timer < 0) { // 시간이 다 되면
+                clearInterval(countdown); // 카운트다운 중지
+                endMessage(); // 종료 메시지 출력
+            }
+        }, 1000);
+
+        function endMessage() {
+            document.getElementById("timer").innerHTML = "타이머 종료";
+        }
+
+        function countdownEffect() {
+            var countdownId = setInterval(function() {
+                timer--; // 타이머에서 1씩 감소
+                document.getElementById("timer").innerHTML = timer;
+                if (timer <= 0) {
+                    clearInterval(countdownId); // 타이머가 0 이하이면 중지
+                    endMessage(); // 종료 메시지 출력
+                }
+            }, 1000); // 1초마다 감소
+        }
+
+        // 타이머 중지 함수 정의
+        function stopTimer() {
+            clearInterval(countdown); // 카운트다운 중지
+            countdownEffect(); // 카운트다운 효과 적용
+            alert("타이머가 중지되었습니다.");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #rect{
+            width: 100px;
+            height: 100px;
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    <div id="rect"></div>
+    <script>
+        let myRect=document.getElementById("rect");
+        myRect.addEventListener("mouseover",function(){
+            myRect.style.backgroundColor="green";
+            myRect.style.borderRadius="50%";
+        });
+        myRect.addEventListener("mouseout",function() {
+            myRect.style.backgroundColor="";
+            myRect.syle.borderRadius="";
+        });
+    </script>
+
+    <h1 id="title"></h1>
+    <h1 id="spring" class="season">봄</h1>
+    <h1 id="summer" class="season">여름</h1>
+    <h1 id="autumn" class="season">가을</h1>
+    <h1 id="winter" class="season">겨울</h1>
+
+    <script>
+        //let title=prompt("제목을 입력하세요");
+        //let t=document.getElementById("title")
+        //t.innerHTML=title;
+        //t.style.color='blue';
+        let season=document.getElementsByClassName("season");
+        for (var i=0;i<season.length ;i++) {
+            season[i].style.color="red";
+        }
+
+        /*
+        let season=document.getElementsByClassName("season");
+        for (var i=0;i<season.length;i++) {
+            season[i].style.color='red'
+        }
+        */
+    </script>
+</body>
+</html>

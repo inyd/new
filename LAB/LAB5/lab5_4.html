@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+    <style>
+        #demo {
+            font-size: 30px;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="demo"></div>
+    <script>
+        function countdown(timer, callback) {
+            const showtimer = setInterval(function() {
+                document.getElementById("demo").innerHTML = timer;
+                timer--; // 1초씩 감소
+                if (timer < 0) { // 시간이 다 되면
+                    clearInterval(showtimer); // 카운트다운 중지
+                    callback(); // 종료 메시지 출력
+                }
+            }, 1000);
+        }
+
+        let inputString = parseInt(prompt("카운트다운할 숫자를 입력하세요."));
+        const timeIn = Number(inputString)
+
+        if (!isNaN(timeIn)) {
+            countdown(timeIn, endMessage);
+        } else {
+            endMessage();
+        }
+
+        function endMessage() {
+            document.getElementById("demo").innerHTML = "타이머 종료";
+        }
+    </script>
+</body>
+</html>

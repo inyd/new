@@ -1,22 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>학번 이름</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src ="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>최다연의 홈페이지</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: pink; 
+        }
+        .container {
+            display: flex;
+            text-align: center;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            padding: 20px;
+        }
+        .link-button:hover{
+            color: black;
+        }
+    </style>
 </head>
 <body>
-    <div class="container mt-3 ">
-        <h1>index.html (데이터사이언스학과 2316757 최다연)</h1>
-        <ul ckass = "nav flex-column">
-            <li class = "pb-3"><a href="#">실습과제 1_HTML</a><span class="badge bg-primary">제출완료</span></li>
-            <li class = "pb-3"><a href="#">실습과제 2_CSS</a><span class="badge bg-primary">제출완료</span></li>
-            <li class = "pb-3"><a href="#">실습과제 3_Layout</a><span class="badge bg-primary">제출완료</span></li>
-            <li class = "pb-3"><a href="#">실습과제 4_JavaScript</a><span class="badge bg-danger">제출예정</span></li>
-            <li class = "pb-3"><a href="#">실습과제 5_JavaScript 2</a><span class="badge bg-danger">제출예정</span></li>
-        </ul>
+    <div class="container">
+        <h1> <프로젝트 설명> </h1>
+        <p>
+            건강과 관련된 제품/정보들을 사용자에게 제공 및 추천하는 홈페이지이다.
+            사용자가 선택한 식생활, 내면, 관련 비디오, 운동에 관한 세부적인 메뉴들에 관하여 소개하여 건강한 삶의 영위를 돕는다.
+        </p>
+        
+        <h2>기능 소개</h2>
+        <p>Home을 눌렀을 때 처음의 화면에는 지도 api를 활용해 회사의 위치를 나타내는 새 창으로 넘어간다.</p>
+        <p>Login과 회원가입을 누를 시 웹 스토리지로 회원의 정보가 담긴 alert를 띄운다.</p>
+        <p>사용자가 로그인 시 id와 pw를 입력했을 때 해당 ID는 존재하지만 pw가 일치하지 않으면 경고 메시지를 표현하고, 해당 id가 존재하지 않을 시 확인 버튼을 누르면 회원가입 화면으로 이동할 수 있게 한다.</p>
+        <a href="index2.html" class="link-button">My Page</a>
     </div>
+    
 </body>
 </html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab6-3</title>
+    <style>
+
+
+    </style>
+</head>
+<body>
+    <h2>
+        새로운 창 화면 가운데 띄우기 실습
+    </h2>
+    <button onclick="window.open('lab6-02.html', 'popup', 'width=200px, height=200px',openPopup())">열기</button>
+    
+
+    <script>
+        function openPopup() {
+            // 새 창의 너비와 높이 설정
+            var width = 400;
+            var height = 400;
+
+            // 화면 중앙에 위치하기 위해 화면의 가로 및 세로 중심 위치를 계산
+            var left = (screen.width - width) / 2;
+            var top = (screen.height - height) / 2;
+
+            // 새 창 열기
+            window.open('popup.html', 'popup', 'width=' + width + ', height=' + height + ', left=' + left + ', top=' + top);
+        }
+    </script>
+
+</body>
+</html>

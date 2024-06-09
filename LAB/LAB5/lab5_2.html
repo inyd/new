@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <script type="text/javascript">
+        function messages() {
+        let inputString = prompt('반복할 메시지를 입력하시오.');
+        let inputString2 = prompt('몇 번 반복할까요?');
+        const count = Number(inputString2);
+
+            for (let i = 0; i < count; i++) {
+                document.write(inputString + "<br>");
+            }
+        }
+        
+
+        messages();        
+    </script>
+</body>
+</html>
