@@ -5,15 +5,22 @@
     <title>최다연</title>
     <link rel="stylesheet" href="home copy.css">
     <style>
-        .button1 {
-        background-color: white; 
-        color: black; 
-        border: 2px solid ;
-        font-size: 16px;
-        transition-duration: 0.4s;
-        cursor: pointer;
+        .button {
+            background-color: white; 
+            color: black; 
+            border: 2px solid ;
+            font-size: 16px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+        .button:hover{
+            color: aqua;
         }
 
+        #login-button{
+            display: block;
+            margin: 0 auto;
+        }
     </style>
 </head>
 <body>
@@ -23,6 +30,7 @@
                 <hgroup id="title">
                     <h1> 🍏 Health Daily 🍏</h1>
                 </hgroup>
+                
                 <nav>
                     <ul id="nav">
                         <li><a href="#">Food</a>
@@ -51,25 +59,25 @@
         </div>
 
         <div class="main">
-			<article class="left-article">
-				<div class="card">
-					<img src="leaf.png" alt="Health Image">
-				</div>
-			</article>
-			<article class="right-article">
-				<div class="card">
-					<header>
-						<h3>--About our homepage--</h3>
-					</header>
-					<p>Our homepage helps you find the way to make your life more positive and productive.<br>We offer you information about inner health, as well as outer.<br>
-						We always hope your wellbeing in your daily life. <br>If you want to visit our products or get some consultation with our manager, here is the location of our company.
-					</p>
-                    <h3>Location: </h3><a href="" class="button">Click!</a><br><br><br>
-                    <a href="login.html" class="button button1" id="login-button">Login</a>
-				</div>
-			</article>
-		</div>
-		
+            <article class="left-article">
+                <div class="card">
+                    <img src="leaf.png" alt="Health Image">
+                </div>
+            </article>
+            <article class="right-article">
+                <div class="card">
+                    <header>
+                        <h2>--About our homepage--</h2>
+                    </header>
+                    <p>Our homepage helps you find the way to make your life more positive and productive.<br>We offer you information about inner health, as well as outer.<br>
+                        We always hope your wellbeing in your daily life. <br>If you want to visit our products or get some consultation with our manager, here is the location of our company.(클릭하면 회사의 위치가 나옵니다!)
+                    </p>
+                    <h3>Location: <a href="#" class="button button1">Click!</a></h3><br><br><br>
+                    <iframe id="map" width="250" height="250" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=126.9584%2C37.5402%2C126.9641%2C37.5445"></iframe>
+                </div>
+            </article>
+        </div>
+        
         <div class="footer">
             <nav class="foot">
                 <ul id="navi">
@@ -87,11 +95,22 @@
                         <a href="contact.html" target="_blank" >
                             <img src="https://cdn.imweb.me/upload/S20231214db87dcce19d22/d4699b8991646.png" class="contact" style="width: 64px;">
                         </a>
-                    </li>
+                    </li>   
                 </ul>
             </nav>
+            <div id="login">
+                <a href="login.html" class="button" id="login-button">Login</a>
+            </div>
             <p>© 2024. Health Daily rights reserved. </p><p>Copyright Dayeon-choi</p>
         </div>
     </div>
+
+    <script>
+        document.querySelector('.button1').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.getElementById('map').src = 'https://www.openstreetmap.org/export/embed.html?bbox=126.9584%2C37.5402%2C126.9641%2C37.5445';
+        });
+    </script>
+
 </body>
 </html>

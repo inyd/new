@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>최다연</title>
+    <link rel="stylesheet" href="youtube.css">
+    <style>
+        .button {
+        background-color: white; 
+        color: black; 
+        border: 2px solid ;
+        font-size: 16px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        }
+        .button:hover{
+            color: aqua;
+        }
+        #login-button{
+            display: block;
+            margin:0 auto;
+        }
+        .card{
+            height:500px;
+            position: relative; 
+            overflow: hidden;
+        }
+        .description {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%; 
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center;
+            align-items: center; 
+            opacity: 0;
+            transition: opacity 0.3s;
+            text-align: center;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .card:hover .description {
+            opacity: 1;
+        }
+
+        .card:hover img {
+            opacity: 1;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const clickableElements = document.querySelectorAll('.clickable');
+            clickableElements.forEach(element => {
+                element.addEventListener('click', function () {
+                    const url = this.getAttribute('data-url');
+                    window.open(url, '_blank');
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="all">
+        <div class="header">
+            <header id="top_header">
+                <hgroup id="title">
+                    <h1> Youtube</h1>
+                </hgroup>
+                <nav>
+                    <ul id="nav">
+                        <li><a href="#">Food</a>
+                            <ul>
+                                <li><a href="menu.html">Menu</a></li>
+                                <li><a href="recipe.html">Recipe</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Mind</a>
+                            <ul>
+                                <li><a href="habit.html">Habit</a></li>
+                                <li><a href="relation.html">Relation</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Video</a>
+                            <ul>
+                                <li><a href="movie.html">Movie</a></li>
+                                <li><a href="youtube.html">Youtube</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="home copy.html">Home</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+
+        <div class="main">
+            <div class="card">
+                <a href="https://youtu.be/5Soj-hcqifc?si=50hBmdtaGB0PZHfA" target="_blank">
+                    <img src="productive.webp" alt="vlog">
+                </a>
+                <div class="description">
+                    <h3>Productive vlog</h3>
+                    <p class="clickable" data-url="https://youtu.be/5Soj-hcqifc?si=50hBmdtaGB0PZHfA">Click here</p>
+                </div>
+            </div>
+            <div class="card">
+                <a href="https://youtu.be/jw1gxrzRgeU?si=ufSQs3ElrcbwHKgK" target="_blank">
+                    <img src="stretch.png" alt="스트레칭">
+                </a>
+                <div class="description">
+                    <h3>Stretching</h3>
+                    <p class="clickable" data-url="https://youtu.be/jw1gxrzRgeU?si=ufSQs3ElrcbwHKgK">Click here</p>
+                </div>
+            </div>
+            <div class="card">
+                <a href="https://youtu.be/G0Aw_L0KEbo?si=WPmDhTC07SAFawJQ" target="_blank">
+                    <img src="food.jpeg" alt="아침식단">
+                </a>
+                <div class="description">
+                    <h3>Breakfast idea</h3>
+                    <p class="clickable" data-url="https://youtu.be/G0Aw_L0KEbo?si=WPmDhTC07SAFawJQ">Click here</p>
+                </div>
+            </div>
+        </div>
+        
+    
+    
+    <div class="footer">
+        <nav class="foot">
+            <ul id="navi">
+                <li>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <img src="https://cdn.imweb.me/upload/S20231214db87dcce19d22/c260186d3bef8.png" class="instar" style="width: 64px;">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/" target="_blank">
+                        <img src="https://cdn.imweb.me/upload/S20231214db87dcce19d22/ef9ab880cef6a.png" class="facebook" style="width: 64px;">
+                    </a>
+                </li>
+                <li>
+                    <a href="contact.html" target="_blank" >
+                        <img src="https://cdn.imweb.me/upload/S20231214db87dcce19d22/d4699b8991646.png" class="contact" style="width: 64px;">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div id="login">
+            <a href="login.html" class="button" id="login-button">Login</a>
+        </div>
+        <p>© 2024. Health Daily rights reserved. </p><br><p>Copyright Dayeon-choi</p>
+    </div>
+</div>
+</body>
+</html>

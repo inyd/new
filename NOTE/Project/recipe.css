@@ -111,3 +111,17 @@ nav ul ul li {
 .footer p {
     margin-top: 20px; 
 }
+.button {
+    background-color: white; 
+    color: black; 
+    border: 2px solid ;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+#login-button{
+    display: block;
+    margin:0 auto;
+}
+

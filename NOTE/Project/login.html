@@ -5,19 +5,29 @@
     <title>최다연</title>
     <link rel="stylesheet" href="home copy.css">
     <style>
-
-        #login{
+        #login {
             text-align: center;
             padding: 200px 200px;
         }
+        .button {
+            background-color: white;
+            color: black;
+            border: 2px solid;
+            font-size: 16px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+        
     </style>
+    <script src="login.js" defer></script>
+    
 </head>
 <body>
     <div class="all">
         <div class="header">
             <header id="top_header">
                 <hgroup id="title">
-                    <h1> Login </h1>
+                    <h1>Login</h1>
                 </hgroup>
                 <nav>
                     <ul id="nav">
@@ -46,26 +56,37 @@
             </header>
         </div>
         <div class="main">
-			<article class="left-article">
-				<div class="card">
-					<img src="leaf.png" alt="Health Image">
-				</div>
-			</article>
-			<article class="right-article">
-				<div class="card">
+            <article class="left-article">
+                <div class="card">
+                    <img src="leaf.png" alt="Health Image">
+                </div>
+            </article>
+            <article class="right-article">
+                <div class="card">
                     <aside id="login">
-                        <form>
+                        <form id="loginForm">
                             <label for="user">Id: </label>
                             <input type="text" id="user" size="15"><br><br>
                             <label for="pass">Pw: </label>
                             <input type="password" id="pass" size="15"><br><br>
-                            <input type="submit" value="로그인">
-                            <input type="button" value="회원가입">
-                        </form>			
+                            <input type="button" value="로그인" onclick="login()">
+                            <input type="button" value="회원가입" onclick="showSignupForm()">
+                        </form>
+                        <form id="signupForm" style="display:none;">
+                            <label for="signupName">Name: </label>
+                            <input type="text" id="signupName" size="15"><br><br>
+                            <label for="signupEmail">Email: </label>
+                            <input type="email" id="signupEmail" size="15" placeholder="example@_.com"><br><br>
+                            <label for="signupUser">Id: </label>
+                            <input type="text" id="signupUser" size="15"><br><br>
+                            <label for="signupPass">Pw: </label>
+                            <input type="password" id="signupPass" size="15"><br><br>
+                            <input type="button" value="회원가입" onclick="signup()">
+                        </form>
                     </aside>
                 </div>
-			</article>
-		</div>
+            </article>
+        </div>
         <div class="footer">
             <nav class="foot">
                 <ul id="navi">
@@ -86,6 +107,7 @@
                     </li>
                 </ul>
             </nav>
+            
             <p>© 2024. Health Daily rights reserved. </p><br><p>Copyright Dayeon-choi</p>
         </div>
     </div>
