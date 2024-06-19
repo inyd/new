@@ -95,7 +95,11 @@ nav ul ul li {
     margin-top: 10px;
     margin-bottom: 5px; 
     box-shadow: 5px 5px 5px green;
-}
+    height:500px;
+    position: relative; 
+    overflow: hidden;
+    }
+
 .footer {
     grid-area: footer;
     color: darkolivegreen;
