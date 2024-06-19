@@ -92,7 +92,10 @@ nav ul ul li {
     margin-top: 10px;
     margin-bottom: 5px; 
     box-shadow: 5px 5px 5px green;
-    overflow: hidden;
+}
+.card img{
+    width: 400px;
+    height: 300px;
 }
 .footer {
     grid-area: footer;

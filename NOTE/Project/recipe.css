@@ -99,7 +99,10 @@ nav ul ul li {
     position: relative; 
     overflow: hidden;
     }
-
+.card img{
+    width: 400px;
+    height: 300px;
+}
 .footer {
     grid-area: footer;
     color: darkolivegreen;
