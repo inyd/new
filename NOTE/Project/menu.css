@@ -73,11 +73,7 @@ nav ul ul li {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    img{float:left;
-    width: 400px;
-    height: 300px;
-    padding: 10px}
-    }
+}
     
 .main article{
     padding: 10px 10px;
@@ -94,8 +90,10 @@ nav ul ul li {
     box-shadow: 5px 5px 5px green;
 }
 .card img{
+    float:left;
     width: 400px;
     height: 300px;
+    padding:10px;
 }
 .footer {
     grid-area: footer;
